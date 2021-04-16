@@ -4,14 +4,14 @@ agent any
  stages{
    stage('compile stage'){
      steps{
-          withMaven(maven :'Maven 3.3'){
+          withMaven(maven :'Maven_3.3'){
          sh 'mvn clean install'		
      }	
      } 
    }
 	 stage('Testing stage'){
 	   steps{
-	    withMaven(maven :'Maven 3.3'){
+	    withMaven(maven :'Maven_3.3'){
 		 sh 'mvn test'
 		}
 	   }
@@ -19,7 +19,7 @@ agent any
 
      stage('deployment stage'){
          steps{
-             withMaven(maven :'Maven 3.3'){
+             withMaven(maven :'Maven_3.3'){
                  sh 'mvn deploy'
              }
          }
