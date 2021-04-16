@@ -1,0 +1,29 @@
+pipeline{
+
+agent any
+ stages{
+   stage('compile stage'){
+     steps{
+        withMaven(maven :'maven_3.3.9'){
+         sh 'mvn clean install'		
+     }	
+     } 
+   }
+	 stage('Testing stage'){
+	   steps{
+	    withMaven(maven :'maven_3.3.9'){
+		 sh 'mvn test'
+		}
+	   }
+	 }
+
+     stage('deployment stage'){
+         steps{
+             withMaven(maven :'maven_3.3.9'){
+                 sh 'mvn deploy'
+             }
+         }
+     }
+ }
+
+}
