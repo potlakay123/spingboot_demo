@@ -1,5 +1,4 @@
 # Spring Boot Maven Example Hello World
-
 Guide
 
 This is a part of the tutorial http://javabycode.com/spring-framework-tutorial/spring-boot-tutorial/spring-boot-maven-example-hello-world.html
