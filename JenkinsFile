@@ -3,7 +3,7 @@ pipeline{
 agent any
  stages{
    stage('git repo & clean'){
-     steps
+     steps{
 	 bat "git clone  https://github.com/potlakay123/spingboot_demo.git"
          bat "mvn clean -f springboot_demo"		
      
