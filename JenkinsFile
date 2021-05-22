@@ -4,7 +4,7 @@ agent any
  stages{
    stage('git repo & clean'){
      steps{
-         bat " mkdir rmdir /s /q spingboot_demo"
+         bat "  rmdir /s /q spingboot_demo"
 	 bat "git clone  https://github.com/potlakay123/spingboot_demo.git"
          bat "mvn clean -f springboot_demo"		
      
